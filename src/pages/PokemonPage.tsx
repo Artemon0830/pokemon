@@ -1,18 +1,24 @@
-import React, {useEffect} from 'react';
-import { useAppDispatch, useAppSelector } from "../redux/hooks-redux";
-import PokemonsComponent from "../components/PokemonsComponent";
+// src/pages/PokemonPage.tsx
+import React, {useState, useEffect} from 'react';
+import {useParams} from "react-router-dom";
 import {pokemonAction} from "../redux/slice/pokemonSlice";
-
+import PokemonComponent from "../components/PokemonComponent";
+import {useAppDispatch, useAppSelector} from "../redux/hooks-redux";
+import {IPoke} from "../models/IPoke";
 
 const PokemonPage = () => {
+    let {name} = useParams();
     let dispatch = useAppDispatch();
-    let { pokemons } = useAppSelector(state => state.pokemonStore);
+    let pokemon = useAppSelector(state => state.pokemonStore.pokemon);
     useEffect(() => {
-        dispatch(pokemonAction.loadPokemon());
-    }, []);
+        if (name) dispatch(pokemonAction.loadPokemon(name));
+    }, [name]);
+
+
     return (
         <div>
-            <PokemonsComponent pokemons={pokemons} />
+            <h1>PokemonPage</h1>
+            {pokemon && <PokemonComponent pokemon={pokemon}  />}
         </div>
     );
 };
