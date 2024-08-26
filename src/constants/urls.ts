@@ -3,4 +3,6 @@ export const urls={
     pokemon:{
         base:'/pokemon',
         byId:(name:string):string=>urls.pokemon.base+'/'+name,
-    }}
+
+    }
+}

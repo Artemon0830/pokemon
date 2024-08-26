@@ -5,5 +5,4 @@
     };
     is_hidden: boolean;
     slot: number;
-
 }

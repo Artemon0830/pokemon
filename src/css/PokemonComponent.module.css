@@ -1,0 +1,27 @@
+
+.pokemonDetail {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.pokemonImage {
+    width: 150px;
+    height: 150px;
+}
+
+.pokemonStats, .pokemonAbilities, .pokemonTypes, .pokemonForms {
+    margin-top: 20px;
+}
+
+.pokemonForms a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+}

@@ -1,0 +1,21 @@
+
+.pokemonList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.pokemonItem {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+.pokemonImage {
+    width: 100px;
+    height: 100px;
+}
